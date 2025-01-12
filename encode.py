@@ -51,17 +51,12 @@ class Queue:
 
 def huffman(data):
     queue = Queue()
-    # print(data)
     for c, freq in data.items():
-        # print("c", c)
-        # print("freq", freq)
         queue.EQ((freq, c))
 
     while len(queue) > 1:
         x_left = queue.DQ()
-        # print("Lewy:", x_left)
         y_right = queue.DQ()
-        # print("Prawy:", y_right)
         z = (x_left[0] + y_right[0], x_left, y_right)
         queue.EQ(z)
 
